@@ -10,7 +10,7 @@ env.hosts = ['100.26.219.106', '35.153.16.107']
 
 
 def do_clean(number=0):
-     """
+    """
     function for archive all content
     Args:
         number (int): The number of kept archives.
