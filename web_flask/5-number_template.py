@@ -37,5 +37,10 @@ def pythonint_flask(n):
     return "{:d} is a number".format(n)
 
 
+@app.route('/number_template/<n>', strict_slashes=False)
+def html_flask(n):
+    return  render_template('5-number.html', n=n)
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
