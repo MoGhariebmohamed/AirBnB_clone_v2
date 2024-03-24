@@ -24,7 +24,7 @@ def text_flask(text):
 
 @app.route('/python', strict_slashes=False)
 def python_flask(text):
-    return "Python " + text.replace('_', ' ')
+    return "Python is cool" + text.replace('_', ' ')
 
 
 @app.route('/python/<text>', strict_slashes=False)
