@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ new class for sqlAlchemy """
 from os import getenv
+import sqlalchemy
 from sqlalchemy.orm import sessionmaker, scoped_session
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from models.base_model import Base
 from models.state import State
@@ -81,4 +82,4 @@ class DBStorage:
     def close(self):
         """ calls remove()
         """
-        self.__session.close()
+        self.__session.remove()
