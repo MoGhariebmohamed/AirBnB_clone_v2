@@ -13,6 +13,7 @@ import sqlalchemy
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
+
 class DBStorage:
     """ create tables in environmental"""
     __engine = None
@@ -79,6 +80,5 @@ class DBStorage:
         self.__session = Session
 
     def close(self):
-        """ calls remove()
-        """
+        """ calls remove()"""
         self.__session.remove()
